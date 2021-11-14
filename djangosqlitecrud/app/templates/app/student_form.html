@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+
+</head>
+<body>
+<div class="container">
+
+<h1 class="h1">Student Form</h1>
+<form method="POST">{% csrf_token %}
+
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td>{{ form.name }}</td>
+        </tr>
+        <tr>
+            <td>Identity Number</td>
+            <td>:</td>
+            <td>{{ form.identityNumber }}</td>
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td>:</td>
+            <td>{{ form.department }}</td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td>:</td>
+            <td>{{ form.address }}</td>
+        </tr>
+        <tr>
+            <td><input type="submit" class="btn btn-primary" value="Save"></td>
+        </tr>
+    </table>
+</form>
+</div>
+</body>
+</html>
